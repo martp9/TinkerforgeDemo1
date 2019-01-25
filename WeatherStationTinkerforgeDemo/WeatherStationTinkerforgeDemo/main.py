@@ -15,7 +15,7 @@ while True:
     humidity = tf.getBrickletHumidityV2()
     illuminance = tf.getAmbientLightV2()
 
-    print("temperature = "+ str(temperature/100.0)+"Â° C")
+    print("temperature = "+ str(temperature/100.0)+"° C")
     print("pressure    = "+ str(pressure/1000.0)+"mPa")
     print("humidity    = "+ str(humidity/100.0)+"%")
     print("illuminance = "+ str(illuminance/100.0)+" lux")
