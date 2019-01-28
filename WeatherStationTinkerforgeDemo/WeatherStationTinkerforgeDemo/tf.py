@@ -65,6 +65,10 @@ def setMotorZeroPos():
 def waitForMils(ms=1):
     sleep(ms/1000)
 
+def getAllData():
+    return temp.get_temperature(), baro.get_air_pressure(), humi.get_humidity(), ambi.get_illuminance()
+
+
 def exit():
     ipcon.disconnect()
 
