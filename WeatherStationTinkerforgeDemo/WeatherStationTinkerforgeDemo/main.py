@@ -1,4 +1,3 @@
-
 from tkinter import *
 import tf
 
@@ -6,8 +5,8 @@ root = Tk()
 #Creat a Layout
 
 #Images
-pic = PhotoImage('png\_twitter.png')
-picture = Label(root, image=pic)
+photo = PhotoImage(file="png\_rain_150_150.png" )
+weatherConditions = Label(root, image=photo)
 
 #Set Window
 root.title("BFH WeatherStation")
@@ -22,7 +21,7 @@ ambi = Label(root, text="0", font='arial 24')
 
 #Set Layout and Font
 space.grid(row=0, sticky=E)
-picture.grid(row=0, column=1)
+weatherConditions.grid(row=1,column=1)
 temp.grid(row=1, sticky=E)
 baro.grid(row=2, sticky=E)
 humi.grid(row=3, sticky=E)
