@@ -24,13 +24,13 @@ from tinkerforge.bricklet_sound_pressure_level import BrickletSoundPressureLevel
 from tinkerforge.bricklet_motorized_linear_poti import BrickletMotorizedLinearPoti
 
 # Sensors
-ipcon = IPConnection() # Create IP connection
+ipcon= IPConnection() # Create IP connection
 temp = BrickletTemperature(UIDt, ipcon) # Create device object
 baro = BrickletBarometer(UIDb, ipcon) 
 humi = BrickletHumidityV2(UIDh, ipcon)
 ambi = AmbientLightV2(UIDa, ipcon)
 spl  = BrickletSoundPressureLevel(UIDs, ipcon)
-mlp = BrickletMotorizedLinearPoti(UIDm, ipcon)
+mlp  = BrickletMotorizedLinearPoti(UIDm, ipcon)
 
 ipcon.connect(HOST, PORT) # Connect to brickd
 # Don't use device before ipcon is connected
@@ -67,7 +67,6 @@ def waitForMils(ms=1):
 
 def getAllData():
     return temp.get_temperature(), baro.get_air_pressure(), humi.get_humidity(), ambi.get_illuminance()
-
 
 def exit():
     ipcon.disconnect()
